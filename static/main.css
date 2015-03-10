@@ -3,6 +3,12 @@ html, body{
     padding:0;
     font-family:Arial;
 }
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
 #section1{
     overflow:auto;
     position:relative;
@@ -32,6 +38,26 @@ html, body{
     width:49%;
     height:600px;
     background-color:#FFFF9C;
+}
+#nav-top{
+    margin:10px 0 0 0;
+    font-size:12px;
+}
+#nav-top a{
+    color:#333366;
+}
+#ks-main-logo-outer{
+    overflow:auto;
+    width:200px;
+    height:200px;
+    text-align:center;
+    margin:0 auto 0 auto;
+    background-color:#FFC20E;
+    border-radius:100px;
+}
+#ks-main-logo{
+    margin:90px 0 0 0;
+    color:#fff;
 }
 #section2{
     background-color:#FFF2CF;
