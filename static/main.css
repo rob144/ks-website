@@ -25,7 +25,7 @@ a:visited {
     left:0;
     z-index:1;
     float:left;
-    width:49%;
+    width:50%;
     height:600px;
     background-color:#AAF2C7;
 }
@@ -35,7 +35,7 @@ a:visited {
     right:0;
     z-index:1;
     float:right;
-    width:49%;
+    width:50%;
     height:600px;
     background-color:#FFFF9C;
 }
@@ -60,7 +60,8 @@ a:visited {
     color:#fff;
 }
 #section2{
-    overflow:auto;
+    overflow-x:hidden;
+    overflow-y:auto;
     background-color:#FFF2CF;
 }
 #s2-inner{
@@ -70,26 +71,71 @@ a:visited {
     background-color:#FFF2CF;
 }
 #about-box{
+    overflow:visible;
     margin:20px 0 0 10px;
     border-radius:250px;
     width:500px;
     height:500px;
     background-color:#fff;
 }
-#about-title{
-    margin:20px 0 0 50px;
+#about-title, #contact-title{
+    position:relative;
+    top:50px;
+    left:70px;
+    font-size: 72px;
+    font-weight:normal;
+    margin:0;
 }
 #about-text{
-
+    position:relative;
+    top:70px;
+    left:70px;
+    font-size: 14px;
 }
-#section3{
+#section-contact{
     height:600px;
     background-color: rgb(255,255,193);
 }
-#s3-inner{
+#section-contact-inner{
     width:900px;
     height:600px;
     margin:0 auto 0 auto;
+}
+#contact-form{
+    width:800px;
+    overflow:visible;
+}
+#contact-form-left{
+    float:left;
+    margin:0 10px 0 0;
+}
+#contact-form-right{
+    float:left;
+}
+.input-outer{
+    margin:0 0 10px 0;
+}
+#contact-note, #contact-form{
+    position: relative;
+    top:70px;
+    left:70px;
+}
+#contact-note {
+    width:800px;
+}
+.contact-form-input{
+    font-size: 12px;
+    height:30px;
+    width:300px;
+    padding:5px;
+    border:none;
+}
+#contact-message{
+    height:110px;
+    width:480px;
+    padding:5px;
+    border:none;
+    float:left;
 }
 #section4{
     height:300px;
@@ -99,4 +145,15 @@ a:visited {
     width:900px;
     height:300px;
     margin:0 auto 0 auto;
+}
+#company-address{
+    position:relative;
+    top:70px;
+    left:70px;
+    font-size: 14px;
+}
+#company-address p{
+    margin:0 0 2px 0;
+    color:#003333;
+    font-size: 12px;
 }
