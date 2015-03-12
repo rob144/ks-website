@@ -1,3 +1,7 @@
+@font-face {
+    font-family: intro-cond;
+    src: url(/static/intro-cond-light-free.otf);
+}
 html, body{
     margin:0;
     padding:0;
@@ -9,151 +13,222 @@ a:link {
 a:visited {
     text-decoration: none;
 }
+
 #section1{
     overflow:auto;
     position:relative;
     z-index:10;
-    width:900px;
+    max-width:900px;
     height:600px;
     margin:0 auto 0 auto;
-    background-image: url("/static/section1bg.png");
+    background-image: url("/static/bgwithbox.png");
     background-repeat: no-repeat;
+    background-position: center top;
 }
-#s1-left{
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-    float:left;
-    width:50%;
-    height:600px;
-    background-color:#AAF2C7;
-}
-#s1-right{
-    position:absolute;
-    top:0;
-    right:0;
-    z-index:1;
-    float:right;
-    width:50%;
-    height:600px;
-    background-color:#FFFF9C;
-}
-#nav-top{
-    margin:10px 0 0 10px;
-    font-size:12px;
-}
-#nav-top a{
-    color:#333366;
-}
-#ks-main-logo-outer{
-    overflow:auto;
-    width:200px;
-    height:200px;
-    text-align:center;
-    margin:0 auto 0 auto;
-    background-color:#FFC20E;
-    border-radius:100px;
-}
-#ks-main-logo{
-    margin:90px 0 0 0;
-    color:#fff;
-}
-#section2{
+    #s1-left{
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+        float:left;
+        width:50%;
+        height:600px;
+        background-color:#AAF2C7;
+    }
+    #s1-right{
+        position:absolute;
+        top:0;
+        right:0;
+        z-index:1;
+        float:right;
+        width:50%;
+        height:600px;
+        background-color:#FFFF9C;
+    }
+    #nav-top{
+        margin:10px 0 0 10px;
+        font-size:12px;
+    }
+    #nav-top a{
+        color:#333366;
+    }
+    #ks-main-logo-outer{
+        position: relative;
+        overflow:auto;
+        width:150px;
+        height:150px;
+        text-align:center;
+        margin:10px auto 0 auto;
+        background-color:#FFC20E;
+        border-radius:100px;
+    }
+    #ks-logo-orbit-above{
+        position: absolute;
+        width:10px;
+        top:51px;
+        left:95px;
+    }
+    #ks-logo-orbit-below{
+        position:absolute;
+        width:10px;
+        top:92px;
+        left:115px;
+    }
+    #ks-main-logo{
+        position:absolute;
+        width:100%;
+        top:68px;
+        font-family: intro-cond;
+        font-size: 22px;
+        letter-spacing: 2px;
+        color:#fff;
+    }
+    #skill-tags{
+        position:relative;
+        top:90px;
+        margin:0 auto 0 auto;
+        max-width:600px;
+        height:300px;
+    }
+    #skill-tags p {
+        text-align: center;
+        width: 100%;
+        margin:0 0 8px 0;
+        color:#fff;
+        font-size: 30px;
+        font-style: italic;
+    }
+
+#section-about{
     overflow-x:hidden;
     overflow-y:auto;
     background-color:#FFF2CF;
 }
-#s2-inner{
-    width:900px;
-    height:600px;
-    margin:0 auto 0 auto;
-    background-color:#FFF2CF;
-}
-#about-box{
-    overflow:visible;
-    margin:20px 0 0 10px;
-    border-radius:250px;
-    width:500px;
-    height:500px;
-    background-color:#fff;
-}
-#about-title, #contact-title{
-    position:relative;
-    top:50px;
-    left:70px;
-    font-size: 72px;
-    font-weight:normal;
-    margin:0;
-}
-#about-text{
-    position:relative;
-    top:70px;
-    left:70px;
-    font-size: 14px;
-}
+    #s2-inner{
+        width:900px;
+        height:600px;
+        margin:0 auto 0 auto;
+        background-color:#FFF2CF;
+    }
+    #about-box{
+        overflow:visible;
+        margin:20px 0 0 10px;
+        border-radius:250px;
+        max-width:500px;
+        height:500px;
+        background-color:#fff;
+    }
+    #about-title, #contact-title{
+        position:relative;
+        top:50px;
+        left:70px;
+        font-family: intro-cond;
+        font-size: 72px;
+        font-weight:normal;
+        color:#333366;
+        margin:0;
+    }
+    #about-text{
+        position:relative;
+        top:70px;
+        left:70px;
+        font-size: 14px;
+    }
+
 #section-contact{
     height:600px;
     background-color: rgb(255,255,193);
 }
-#section-contact-inner{
-    width:900px;
-    height:600px;
-    margin:0 auto 0 auto;
-}
-#contact-form{
-    width:800px;
-    overflow:visible;
-}
-#contact-form-left{
-    float:left;
-    margin:0 10px 0 0;
-}
-#contact-form-right{
-    float:left;
-}
-.input-outer{
-    margin:0 0 10px 0;
-}
-#contact-note, #contact-form{
-    position: relative;
-    top:70px;
-    left:70px;
-}
-#contact-note {
-    width:800px;
-}
-.contact-form-input{
-    font-size: 12px;
-    height:30px;
-    width:300px;
+    #section-contact-inner{
+        max-width:900px;
+        height:600px;
+        margin:0 auto 0 auto;
+    }
+    #contact-form{
+        max-width:800px;
+        overflow:visible;
+    }
+    #contact-form-left{
+        float:left;
+        margin:0 10px 0 0;
+    }
+    #contact-form-right{
+        float:left;
+    }
+    .input-outer{
+        margin:0 0 10px 0;
+    }
+    #contact-note, #contact-form{
+        position: relative;
+        top:70px;
+        left:70px;
+    }
+    #contact-note {
+        max-width:700px;
+        margin-top:0;
+        color:#333366;
+    }
+    .contact-form-input{
+        font-size: 12px;
+        height:30px;
+        width:350px;
+        padding:5px;
+        border:2px solid #fff;
+    }
+    #contact-message{
+        height:110px;
+        width:350px;
+        padding:5px;
+        border:none;
+        float:left;
+    }
+#btn-send-inquiry{
+    float:right;
+    margin:10px 0 0 0;
+    width:100px;
+    color:#fff;
     padding:5px;
     border:none;
+    background-color: #333366;
+    cursor:pointer;
 }
-#contact-message{
-    height:110px;
-    width:480px;
-    padding:5px;
-    border:none;
-    float:left;
-}
-#section4{
+#section-footer{
     height:300px;
     background-color: rgb(194,255,255);
 }
-#s4-inner{
-    width:900px;
-    height:300px;
-    margin:0 auto 0 auto;
-}
-#company-address{
-    position:relative;
-    top:70px;
-    left:70px;
-    font-size: 14px;
-}
-#company-address p{
-    margin:0 0 2px 0;
-    color:#003333;
-    font-size: 12px;
-}
+    #footer-inner{
+        position:relative;
+        width:900px;
+        height:300px;
+        margin:0 auto 0 auto;
+    }
+    #company-address{
+        position:relative;
+        top:70px;
+        left:70px;
+        font-size: 14px;
+        color:#003333;
+    }
+    #company-address p{
+        margin:0 0 2px 0;
+        color:#003333;
+        font-size: 12px;
+    }
+    #footer-bottom{
+        margin-bottom: 20px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    #footer-bottom-right{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 12px;
+    }
+    #footer-bottom-left{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 12px;
+    }
