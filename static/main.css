@@ -3,9 +3,11 @@
     src: url(/static/intro-cond-light-free.otf);
 }
 html, body{
+    width:100%;
     margin:0;
     padding:0;
     font-family:Arial;
+    background-color:blue;
 }
 a:link {
     text-decoration: none;
@@ -120,7 +122,7 @@ a:visited {
     background-color:#FFF2CF;
 }
     #s2-inner{
-        width:900px;
+        max-width:900px;
         height:600px;
         margin:0 auto 0 auto;
         background-color:#FFF2CF;
@@ -144,43 +146,41 @@ a:visited {
         margin:0;
     }
     #about-text{
-        position:relative;
-        top:70px;
-        left:70px;
+        margin: 50 20px 0 70px;
         font-size: 14px;
     }
 
-#section-contact{
+#section-contact {
     height:600px;
     background-color: rgb(255,255,193);
 }
-    #section-contact-inner{
+    #section-contact-inner {
         max-width:900px;
         height:600px;
         margin:0 auto 0 auto;
     }
-    #contact-form{
+    #contact-form {
         max-width:800px;
         overflow:visible;
     }
-    #contact-form-left{
+    #contact-form-left {
         float:left;
         margin:0 10px 0 0;
     }
-    #contact-form-right{
+    #contact-form-right {
         float:left;
     }
-    .input-outer{
+    .input-outer {
         margin:0 0 10px 0;
     }
-    #contact-note, #contact-form{
-        position: relative;
-        top:70px;
-        left:70px;
+    #contact-note {
+        margin:70px 20px 0 70px;
+    }
+    #contact-form{
+        margin:20px 20px 0 70px;
     }
     #contact-note {
         max-width:700px;
-        margin-top:0;
         color:#333366;
     }
     .contact-form-input{
