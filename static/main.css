@@ -2,12 +2,11 @@
     font-family: intro-cond;
     src: url(/static/intro-cond-light-free.otf);
 }
-html, body{
+html, body {
     width:100%;
     margin:0;
     padding:0;
     font-family:Arial;
-    background-color:blue;
 }
 a:link {
     text-decoration: none;
@@ -16,38 +15,23 @@ a:visited {
     text-decoration: none;
 }
 
-#section1{
+#section-home {
     overflow:auto;
-    position:relative;
     z-index:10;
-    max-width:900px;
     height:600px;
     margin:0 auto 0 auto;
-    background-image: url("/static/bgwithbox.png");
-    background-repeat: no-repeat;
-    background-position: center top;
+    background-image:url(/static/topbg.png);
+    background-repeat:repeat-y;
+    background-position:center top;
 }
-    #s1-left{
-        position:absolute;
-        top:0;
-        left:0;
-        z-index:1;
-        float:left;
-        width:50%;
+    #section-home-inner {
+        overflow: auto;
         height:600px;
-        background-color:#AAF2C7;
+        background-image:url(/static/bgwithbox.png);
+        background-position:center top;
+        background-repeat:no-repeat;
     }
-    #s1-right{
-        position:absolute;
-        top:0;
-        right:0;
-        z-index:1;
-        float:right;
-        width:50%;
-        height:600px;
-        background-color:#FFFF9C;
-    }
-    #nav-top{
+    #nav-top {
         overflow: auto;
         margin:10px 0 0 10px;   
     }
@@ -70,42 +54,24 @@ a:visited {
         border-left:1px solid #333366;
     }
     #ks-main-logo-outer{
-        position: relative;
         overflow:auto;
-        width:150px;
-        height:150px;
+        height:151px;
         text-align:center;
         margin:10px auto 0 auto;
-        background-color:#FFC20E;
-        border-radius:100px;
-    }
-    #ks-logo-orbit-above{
-        position: absolute;
-        width:10px;
-        top:51px;
-        left:95px;
-    }
-    #ks-logo-orbit-below{
-        position:absolute;
-        width:10px;
-        top:92px;
-        left:115px;
+        background-image:url(/static/kslogo.png);
+        background-position:center top;
+        background-repeat:no-repeat;
     }
     #ks-main-logo{
-        position:absolute;
-        width:100%;
-        top:68px;
         font-family: intro-cond;
         font-size: 22px;
         letter-spacing: 2px;
         color:#fff;
+        margin: 68px auto 0 auto;
     }
-    #skill-tags{
-        position:relative;
-        top:90px;
-        margin:0 auto 0 auto;
+    #skill-tags {
+        margin:90px auto 0 auto;
         max-width:600px;
-        height:300px;
     }
     #skill-tags p {
         text-align: center;
@@ -116,18 +82,22 @@ a:visited {
         font-style: italic;
     }
 
-#section-about{
+#section-about {
     overflow-x:hidden;
     overflow-y:auto;
     background-color:#FFF2CF;
+    background-image:url(/static/trianglebg.png);
+    background-position:right center;
+    background-repeat:no-repeat;
 }
-    #s2-inner{
+    #s2-inner {
+        overflow:auto;
         max-width:900px;
         height:600px;
         margin:0 auto 0 auto;
-        background-color:#FFF2CF;
     }
-    #about-box{
+    #about-box {
+        float:left;
         overflow:visible;
         margin:20px 0 0 10px;
         border-radius:250px;
@@ -135,26 +105,31 @@ a:visited {
         height:500px;
         background-color:#fff;
     }
-    #about-title, #contact-title{
-        position:relative;
-        top:50px;
-        left:70px;
+    #contact-title {
+        margin: 50px 0 0 70px;
         font-family: intro-cond;
         font-size: 72px;
         font-weight:normal;
         color:#333366;
-        margin:0;
     }
-    #about-text{
+    #about-title {
+        margin: 50px 0 0 70px;
+        font-family: intro-cond;
+        font-size: 72px;
+        font-weight:normal;
+        color:#333366;
+    }
+    #about-text {
         margin: 50 20px 0 70px;
         font-size: 14px;
     }
 
 #section-contact {
     height:600px;
-    background-color: rgb(255,255,193);
+    background-color:rgb(255,255,193);
 }
     #section-contact-inner {
+        overflow:auto;
         max-width:900px;
         height:600px;
         margin:0 auto 0 auto;
@@ -174,30 +149,28 @@ a:visited {
         margin:0 0 10px 0;
     }
     #contact-note {
-        margin:70px 20px 0 70px;
-    }
-    #contact-form{
-        margin:20px 20px 0 70px;
-    }
-    #contact-note {
+        margin: 20 20px 0 70px;
         max-width:700px;
         color:#333366;
     }
-    .contact-form-input{
+    #contact-form {
+        margin:20px 20px 0 70px;
+    }
+    .contact-form-input {
         font-size: 12px;
         height:30px;
         width:350px;
         padding:5px;
         border:2px solid #fff;
     }
-    #contact-message{
+    #contact-message {
         height:110px;
         width:350px;
         padding:5px;
         border:none;
         float:left;
     }
-#btn-send-inquiry{
+#btn-send-inquiry {
     float:right;
     margin:10px 0 0 0;
     width:100px;
@@ -207,45 +180,37 @@ a:visited {
     background-color: #333366;
     cursor:pointer;
 }
-#section-footer{
+#section-footer {
     height:300px;
-    background-color: rgb(194,255,255);
+    background-color:#CCFFFF;
 }
-    #footer-inner{
-        position:relative;
+    #footer-inner {
+        overflow:auto;
         max-width:900px;
         height:300px;
         margin:0 auto 0 auto;
     }
-    #company-address{
-        position:relative;
-        top:70px;
-        left:70px;
-        font-size: 14px;
+    #company-address {
+        margin:50px 0 0 70px;
+        font-size:14px;
         color:#003333;
     }
-    #company-address p{
+    #company-address p {
         margin:0 0 2px 0;
         color:#003333;
-        font-size: 12px;
+        font-size:12px;
     }
-    #footer-bottom{
-        margin-bottom: 20px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+    #footer-bottom {
+        margin: 50px 0 0 70px;
+        max-width:710px;
     }
-    #footer-bottom-right{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        font-size: 12px;
+    #footer-bottom-right {
+        float:right;
+        font-size:12px;
         margin:0 10px 0 0;
     }
-    #footer-bottom-left{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        font-size: 12px;
-        margin:0 0 0 10px;
+    #footer-bottom-left {
+        float:left;
+        font-size:12px;
+        margin:0 10px 0 0;
     }
