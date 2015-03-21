@@ -2,14 +2,8 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="/static/main.css"> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </head>
-            <!--
-            <div id='nav-top' class='nav'>
-                <a class='nav-home' href='#home'>HOME</a>
-                <a class='nav-about' href='#about'>ABOUT</a>
-                <a class='nav-contact' href='#contact'>CONTACT</a>
-            </div>
-            -->
     <body>
         <div id='section-home'>
             <div id='section-home-inner'>
@@ -61,22 +55,22 @@ lacus. Praesent at nibh egestas, ultricies lectus at, laoreet arcu. Vestibulum a
         <div id='section-contact'>
             <div id='section-contact-inner'>
                 <h2 id='contact-title'>Contact</h2>
-                <p id='contact-note'>Want to know how we can help you create something amazing?<br/>Send us a message with your thoughts, ideas, requirements and questions...<p>
-                <form id='contact-form'>
+                <p id='contact-note'>Want to know how we can help you create something amazing?<br/>Send us a message with your ideas, requirements and questions...<p>
+                <form id='contact-form' action='/contact-msg' method='post'>
                     <div id='contact-form-left'>
                         <div class='input-outer'>
-                            <input id='contact-name' type='text' placeholder='NAME' class='contact-form-input'/>
+                            <input id='contact-name' name='contact-name' type='text' class='contact-form-input' placeholder='NAME'/>
                         </div>
                         <div class='input-outer'>
-                            <input id='contact-email' type='text' placeholder='EMAIL' class='contact-form-input'/>
+                            <input id='contact-email' name='contact-email' type='text' class='contact-form-input' placeholder='EMAIL'/>
                         </div>
                         <div class='input-outer'>
-                            <input id='contact-telephone' type='text' placeholder='TELEPHONE' class='contact-form-input'/>
+                            <input id='contact-telephone' name='contact-telephone' type='text' class='contact-form-input' placeholder='TELEPHONE'/>
                         </div>
                     </div>
                     <div id='contact-form-right'>
                         <div class='input-outer'>
-                            <textarea id='contact-message' placeholder='YOUR MESSAGE HERE' class='contact-form-input'></textarea>
+                            <textarea id='contact-message' name='contact-message' class='contact-form-input' placeholder='YOUR MESSAGE HERE'></textarea>
                         </div>
                         <button id='btn-send-inquiry'>SEND</button>
                     </div>
@@ -93,7 +87,7 @@ lacus. Praesent at nibh egestas, ultricies lectus at, laoreet arcu. Vestibulum a
                     <p>England</p>
                 </div>
                 <div id='footer-bottom'>
-                <div id='footer-bottom-left'>Keplarsoft © 2015 | Registered company number: number 03360519</div>
+                <div id='footer-bottom-left'>Keplarsoft © 2015 | Registered company number: 03360519</div>
                     <div id='footer-bottom-right'>
                         <div id='nav-bottom' class='nav'>
                             <a class='nav-contact' href='#contact'>CONTACT</a>
@@ -105,5 +99,33 @@ lacus. Praesent at nibh egestas, ultricies lectus at, laoreet arcu. Vestibulum a
             </div>
         </div>
     </body>
+
+<script type='text/javascript'>
+
+    $( document ).ready( function() {
+        var urlHash = window.location.hash;
+        if(urlHash.length >= 1) scrollToSection(urlHash);
+    })
+
+    function scrollToSection(hash){
+        var elemId = '#section-' + hash.replace('#','');
+        $('html, body').animate({
+            scrollTop: $(elemId).offset().top
+        }, 1000);
+    }
+
+    $(".nav-home").click(function() {
+        scrollToSection("home");
+    });
+
+    $(".nav-about").click(function() {
+        scrollToSection("about");
+    });
+
+    $(".nav-contact").click(function() {
+        scrollToSection("contact");
+    });
+
+</script>
 
 </html>

@@ -1,6 +1,19 @@
 @font-face {
-    font-family: intro-cond;
+    font-family:intro-cond;
     src: url(/static/intro-cond-light-free.otf);
+}
+@font-face {
+    font-family:comfortaa;
+    src: url(/static/comfortaa/Comfortaa_Regular.ttf);
+}
+@font-face {
+    font-family:comfortaa;
+    src: url(/static/comfortaa/Comfortaa_Thin.ttf);
+}
+@font-face {
+    font-family:comfortaa;
+    src: url(/static/comfortaa/Comfortaa_Bold.ttf);
+    font-weight: bold;
 }
 html, body {
     width:100%;
@@ -56,6 +69,7 @@ a:visited {
     #ks-main-logo-outer{
         overflow:auto;
         height:151px;
+        width:151px;
         text-align:center;
         margin:10px auto 0 auto;
         background-image:url(/static/kslogo.png);
@@ -63,11 +77,13 @@ a:visited {
         background-repeat:no-repeat;
     }
     #ks-main-logo{
-        font-family: intro-cond;
-        font-size: 22px;
-        letter-spacing: 2px;
+        font-family:comfortaa;
+        font-size:22px;
+        font-weight: normal;
+        letter-spacing:2px;
         color:#fff;
-        margin: 68px auto 0 auto;
+        margin:64px auto 0 auto;
+        padding-left:3px;
     }
     #skill-tags {
         margin:90px auto 0 auto;
@@ -75,11 +91,11 @@ a:visited {
     }
     #skill-tags p {
         text-align: center;
-        width: 100%;
+        width:100%;
         margin:0 0 8px 0;
         color:#fff;
-        font-size: 30px;
-        font-style: italic;
+        font-size:30px;
+        font-style:italic;
     }
 
 #section-about {
@@ -106,16 +122,16 @@ a:visited {
         background-color:#fff;
     }
     #contact-title {
-        margin: 50px 0 0 70px;
-        font-family: intro-cond;
-        font-size: 72px;
+        margin:50px 0 0 70px;
+        font-family:comfortaa;
+        font-size:72px;
         font-weight:normal;
         color:#333366;
     }
     #about-title {
-        margin: 50px 0 0 70px;
-        font-family: intro-cond;
-        font-size: 72px;
+        margin:50px 0 0 70px;
+        font-family:comfortaa;
+        font-size:72px;
         font-weight:normal;
         color:#333366;
     }
@@ -126,7 +142,7 @@ a:visited {
 
 #section-contact {
     height:600px;
-    background-color:rgb(255,255,193);
+    background-color:#FFFFCC;
 }
     #section-contact-inner {
         overflow:auto;
@@ -170,16 +186,37 @@ a:visited {
         border:none;
         float:left;
     }
-#btn-send-inquiry {
-    float:right;
-    margin:10px 0 0 0;
-    width:100px;
-    color:#fff;
-    padding:5px;
-    border:none;
-    background-color: #333366;
-    cursor:pointer;
+    #btn-send-inquiry {
+        float:right;
+        margin:10px 0 0 0;
+        width:100px;
+        color:#fff;
+        padding:5px;
+        border:none;
+        background-color: #333366;
+        cursor:pointer;
+    }
+
+#contact-response {
+    margin: 20 20px 0 70px;
+    max-width:700px;
+    color:#333366;
 }
+    #contact-response-page #nav-top {
+        background-color: #ffffcc;
+        margin:0;
+        padding:10px 0 0 10px;
+        overflow:auto;
+    }
+
+    #salutation {
+        margin:10px 0 35px 0;
+    }
+
+    #regards {
+        margin:35px 0 10px 0;
+    }
+
 #section-footer {
     height:300px;
     background-color:#CCFFFF;
