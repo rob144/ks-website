@@ -27,18 +27,19 @@ def contact_msg():
     contact_email = request.form['contact-email']
     contact_telephone = request.form['contact-telephone']
     contact_message = request.form['contact-message']
-
-    con = get_db_con()
-    with con:
-        cur = con.cursor()    
-        cur.execute(
-            """INSERT INTO messages 
-                (contact_name, contact_email, contact_telephone, contact_message)
-                VALUES (?, ?, ?, ?)""",
-                (contact_name, contact_email, contact_telephone, contact_message)
-        )
-
-    return render_template('contact-msg.html', contact_name=request.form['contact-name'])
+    
+    if(len(contact_message) > 3):
+        con = get_db_con()
+        with con:
+            con.cursor().execute(
+                """INSERT INTO messages 
+                    (contact_name, contact_email, contact_telephone, contact_message)
+                    VALUES (?, ?, ?, ?)""",
+                    (contact_name, contact_email, contact_telephone, contact_message)
+            )
+        return render_template('contact-msg.html', contact_name=request.form['contact-name'])
+    else:
+        return render_template('index.html', error='Message was empty.')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=81)

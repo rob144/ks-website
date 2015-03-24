@@ -107,6 +107,7 @@
     $( document ).ready( function() {
         var urlHash = window.location.hash;
         if(urlHash.length >= 1) scrollToSection(urlHash);
+        $('btn-send-inquiry').removeAttr('disabled');
     })
 
     function scrollToSection(hash){
@@ -116,17 +117,21 @@
         }, 1000);
     }
 
-    $(".nav-home").click(function() {
+    $('.nav-home').click(function() {
         scrollToSection("home");
     });
 
-    $(".nav-about").click(function() {
+    $('.nav-about').click(function() {
         scrollToSection("about");
     });
 
-    $(".nav-contact").click(function() {
+    $('.nav-contact').click(function() {
         scrollToSection("contact");
     });
+
+    $('btn-send-inquiry').click(function(){
+        $(this).attr('disabled','disabled');
+    }
 
 </script>
 
