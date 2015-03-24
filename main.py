@@ -1,5 +1,21 @@
 from flask import Flask, request, send_from_directory, render_template
+import sqlite3 as lite
+
 app = Flask(__name__)
+
+def get_db_con():
+    return lite.connect('contact.db')
+
+con = get_db_con()
+with con:
+    con.cursor().execute(
+        """CREATE TABLE IF NOT EXISTS messages(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            contact_name TEXT,
+            contact_email TEXT,
+            contact_telephone TEXT,
+            contact_message TEXT)"""
+    )
 
 @app.route('/')
 def main():
@@ -7,6 +23,21 @@ def main():
 
 @app.route('/contact-msg', methods=['POST'])
 def contact_msg():
+    contact_name = request.form['contact-name']
+    contact_email = request.form['contact-email']
+    contact_telephone = request.form['contact-telephone']
+    contact_message = request.form['contact-message']
+
+    con = get_db_con()
+    with con:
+        cur = con.cursor()    
+        cur.execute(
+            """INSERT INTO messages 
+                (contact_name, contact_email, contact_telephone, contact_message)
+                VALUES (?, ?, ?, ?)""",
+                (contact_name, contact_email, contact_telephone, contact_message)
+        )
+
     return render_template('contact-msg.html', contact_name=request.form['contact-name'])
 
 if __name__ == '__main__':
