@@ -136,8 +136,14 @@ a:visited {
     }
     #about-text {
         max-width:400px;
-        margin: 20px 20px 0 70px;
-        font-size: 14px;
+        margin:20px 20px 0 70px;
+        font-size:14px;
+    }
+    #about-salutation {
+        margin:0 0 25px 0;
+    }
+    #about-closing-tag {
+        margin:25px 0 0 0;
     }
 
 #section-contact {
@@ -167,6 +173,9 @@ a:visited {
     #contact-note {
         margin: 20 20px 0 70px;
         max-width:700px;
+    }
+    #contact-note p {
+        font-size:14px;
         color:#333366;
     }
     #contact-form {
