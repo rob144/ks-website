@@ -116,10 +116,9 @@ a:visited {
         float:left;
         overflow:visible;
         margin:20px 0 0 10px;
-        border-radius:250px;
-        max-width:500px;
-        height:500px;
-        background-color:#fff;
+        width:560px;
+        height:560px;
+        background-image:url(/static/circle.png);
     }
     #contact-title {
         margin:50px 0 0 70px;
@@ -136,7 +135,8 @@ a:visited {
         color:#333366;
     }
     #about-text {
-        margin: 50 20px 0 70px;
+        max-width:400px;
+        margin: 20px 20px 0 70px;
         font-size: 14px;
     }
 
