@@ -58,7 +58,7 @@
                     <p>Want to know how we can help you create something amazing?</p>
                     <p>Send us a message with your ideas, requirements and questions...</p>
                 </div>
-                <form id='contact-form' action='/contact-msg' method='post'>
+                <form id='contact-form' action='/#contact' method='post'>
                     <div id='contact-form-left'>
                         <div class='input-outer'>
                             <input id='contact-name' name='contact-name' type='text' class='contact-form-input' placeholder='NAME'/>
@@ -105,9 +105,13 @@
 <script type='text/javascript'>
 
     $( document ).ready( function() {
+        console.log('1');
         var urlHash = window.location.hash;
+        console.log('2');
         if(urlHash.length >= 1) scrollToSection(urlHash);
+        console.log('3');
         $('btn-send-inquiry').removeAttr('disabled');
+        console.log('4');
     })
 
     function scrollToSection(hash){
@@ -131,7 +135,7 @@
 
     $('btn-send-inquiry').click(function(){
         $(this).attr('disabled','disabled');
-    }
+    });
 
 </script>
 
