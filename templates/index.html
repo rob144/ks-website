@@ -105,13 +105,9 @@
 <script type='text/javascript'>
 
     $( document ).ready( function() {
-        console.log('1');
         var urlHash = window.location.hash;
-        console.log('2');
         if(urlHash.length >= 1) scrollToSection(urlHash);
-        console.log('3');
         $('btn-send-inquiry').removeAttr('disabled');
-        console.log('4');
     })
 
     function scrollToSection(hash){
